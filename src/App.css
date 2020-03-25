@@ -1,38 +1,164 @@
-.App {
+body{
+  position: relative;
+}
+
+
+  /*--------------Navigation ------------------- */
+.navBar {
+  background-color: #faffd1;
+  display: grid;
+  grid-template-columns: 1fr;
+  border-bottom: 3px solid black;
+}
+
+.navLinks {
+margin: auto;
+padding: 20px;
+}
+
+.navLink {
+  padding: 20px;
+  font-size: 20px;
+}
+
+.navLink:hover{
+  background-color: red;
+}
+
+
+
+
+
+/* -------------------- Layout Homepage ------------------*/
+.Home {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1300px){
+  .Home {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .Home{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------Styling Game Cards Homepage--------*/
+.game{
   text-align: center;
+  margin: 50px;
+  border: 1px solid black;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.game img {
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.game--info{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 50px;
+  position: absolute;
+  bottom: 0;
+  margin-top: 100px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.game--rating{
+  width: 50%;
+  margin:auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+
 }
 
-.App-link {
-  color: #61dafb;
+.game--rating img, .game--rating p{
+  vertical-align: middle;
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.game--rating p{
+ color: white;
+ z-index: 2;
+ margin-top: 43px;
+}
+
+.game--released{
+  background-color: black;
+  color: white; 
+}
+
+
+
+
+.game--link {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.game--button{
+   width: 100%;
+   position: relative;
+   padding: 10px;
+   font-size: 20px;
+   border-radius: 5px;
+}
+
+.game--button:hover{
+  background-color: red;
+  cursor: pointer;
+  border: none;
+  transform:scaleY(1.1);
+  transform:scaleX(1.01);
+}
+
+
+/*  -------------Search Function ----------*/
+
+.SearchGames{
+  display: grid;
+}
+
+.SearchGames input {
+  width: 50%;
+  margin: auto;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+
+
+
+/* ------------------- Contact Form -----------------*/
+.login {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+
+.form--item{
+  grid-column: 2/3;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.form-item p{
+  font-size: 10px;
+}
+
+ .form--item input{
+  width: 99%;
 }
