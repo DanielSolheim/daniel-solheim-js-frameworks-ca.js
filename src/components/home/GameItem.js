@@ -10,15 +10,20 @@ return (
 
      <h1 > {name} </h1>
 
-     <img src={background_image} alt={name}/ >
+   <div className="game--imgcontainer" >
+      <img src={background_image} alt={name}/ >
 
-     <div className="game--info">
       <div className="game--rating">
         <img src="./images/star.svg" alt={name} />
         <p> {rating} </p>
       </div>
-        <p className="game--released"> <b>Released: </b> <br/> {released} </p>
-      </div>
+
+      <p className="game--released"> <b>Released: </b> <br/> {released} </p>
+    </div>   
+
+
+
+
 
      <Link className="game--link"to={"game/" + id}>
         <button className="game--button " >
