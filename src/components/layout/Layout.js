@@ -31,7 +31,14 @@ export default function Layout(){
              <Route path="/game/:id" component={GameDetail} />
       </Switch>
 
+
+    <footer>
+        <p> @Daniel Solheim </p> 
+    </footer>
      </div>
+
+
+
     </Router>
 
 

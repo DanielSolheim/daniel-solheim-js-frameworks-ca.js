@@ -1,28 +1,35 @@
 body{
   position: relative;
+
+  background: repeating-linear-gradient( -45deg, #000, #444 1px, #001 1px);
+
 }
 
 
   /*--------------Navigation ------------------- */
 .navBar {
-  background-color: #faffd1;
+  background: repeating-linear-gradient( 45deg, #000, #222 1px, #001 1px);
   display: grid;
   grid-template-columns: 1fr;
-  border-bottom: 3px solid black;
+
 }
 
 .navLinks {
 margin: auto;
-padding: 20px;
+padding: 30px;
 }
 
 .navLink {
-  padding: 20px;
+  padding: 30px;
   font-size: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .navLink:hover{
-  background-color: red;
+  background-color: white;
+  color: black;
 }
 
 
@@ -33,6 +40,7 @@ padding: 20px;
 .Home {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 900px) and (max-width: 1300px){
@@ -51,16 +59,22 @@ padding: 20px;
 .game{
   text-align: center;
   margin: 50px;
-  border: 1px solid black;
   display: grid;
   grid-template-columns:  1fr 1fr 1fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr 40px;
+  border-radius: 10px;
+
 }
 
 
 .game h1{
   grid-column: 1/4;
   grid-row: 1/2;
+  height: 100%;
+  background-color: black;
+  color: white;
+ padding-top: 10px;
+
 }
 
 .game--imgcontainer {
@@ -109,14 +123,8 @@ padding: 20px;
   background-color: black;
   color: white;
   padding: 10px;
-  opacity: 0.7;
+  opacity: 1;
 }
-
-
-
-
-
-
 
 
 .game--link {
@@ -132,11 +140,12 @@ padding: 20px;
 }
 
 .game--button:hover{
-  background-color: red;
+  background-color: lightblue;
   cursor: pointer;
   border: none;
-  transform:scaleY(1.1);
+
   transform:scaleX(1.01);
+
 }
 
 
@@ -178,3 +187,79 @@ padding: 20px;
  .form--item input{
   width: 99%;
 }
+
+
+
+/*---------------------- CharacterDetail ----------------------- */
+  .CharacterDetail {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    margin-bottom: 100px;
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 1300px){
+    .CharacterDetail {
+
+      grid-template-columns: 100px 1fr 100px;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .CharacterDetail {
+
+      grid-template-columns: 20px 1fr 20px;
+    }
+  }
+
+  .detail--title, .detail--image, .detail--description,.detail--link{
+    grid-column: 2/3;
+  }
+
+  .detail--image{
+    width: 100%;
+  }
+
+  .detail--description, .detail--title {
+    color: white;
+  }
+
+  .detail--link{
+   grid-column: 2/3;
+   display: grid;
+   grid-template-columns: 100%;
+   margin-top: 20px;
+  }
+
+  .detail--link__button{
+    display: block;
+    width: 100%;
+   font-size: 50px;
+
+  }
+
+  .detail--link__button:hover{
+    background-color: lightblue;
+    cursor: pointer;
+    border: none;
+    padding: 3px;
+    transform: scaleY(1.03);
+  }
+
+  /* -------------footer -------------- */
+
+  footer{
+    display: grid;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+
+
+  }
+
+  footer p{
+    margin :auto;
+      color: white;
+      padding: 20px;
+  }

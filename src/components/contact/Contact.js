@@ -7,7 +7,7 @@ const schema = yup.object().shape({
   firstName: yup.string().required('Firstname is required'),
   lastName: yup.string().required('Lastname is required'),
   email: yup.string().email('Invalid email').required('Email is required'),
-  password: yup.string().min(4).required('Paddword is required')
+  message: yup.string().min(4).required('Paddword is required')
 });
 
 
@@ -45,8 +45,8 @@ export default function Contact(props){
           </div>
 
           <div className="form--item form--password">
-            <input name="password" placeholder="Password....." ref={register()} />
-            {errors.password && <p> {errors.password.message} </p>}
+            <input name="message" placeholder="Message....." ref={register()} />
+            {errors.message && <p> {errors.message.message} </p>}
          </div>
 
          <input className=" form--item form--submit" type="submit" />

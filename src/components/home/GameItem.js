@@ -14,12 +14,12 @@ return (
       <img src={background_image} alt={name}/ >
 
       <div className="game--rating">
-        <img src="./images/star.svg" alt={name} />
+        <img src="./images/star2.svg" alt={name} />
         <p> {rating} </p>
       </div>
 
       <p className="game--released"> <b>Released: </b> <br/> {released} </p>
-    </div>   
+    </div>
 
 
 

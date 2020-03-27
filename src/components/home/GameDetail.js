@@ -4,7 +4,7 @@ import { BASE_URL } from "./../constants/api";
 
 
 
-export default function CharacterDetail(){
+export default function GameDetail(){
   const [detail, setDetail] = useState([]);
 
 let {id} = useParams();
@@ -24,12 +24,15 @@ const {name, background_image, description, website} = detail;
 
 
 return (
-  <>
-     <h1>{name}</h1>
-     <img src={background_image}  alt={name}/>
-     <div dangerouslySetInnerHTML={ {__html: description} } />
-     <a href={website}> Website</a>
-  </>
+  <div className="CharacterDetail">
+     <h1  className="detail--title">{name}</h1>
+     <img className="detail--image" src={background_image}  alt={name}/>
+     <form  className="detail--link"action={website} >
+        <button className="detail--link__button" type="submit"> See website</button>
+    </form>
+     <div className="detail--description" dangerouslySetInnerHTML={ {__html: description} } />
+
+  </div>
 
 )
 
