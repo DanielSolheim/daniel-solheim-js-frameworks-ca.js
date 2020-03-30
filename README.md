@@ -1,7 +1,7 @@
 # Js Frameworks CA
 This is a school project where we used react to create a display of Video Games  
 
-##Notes To Teacher
+## Notes To Teacher
 I read feedback from MA4 and i tried to apply it in this task.
 Im tried making it mobile first, im using a grid system for the layout
 and i noticed most of the styles were universal. But for the layout i used media queries where mobile were defined first.
@@ -12,7 +12,7 @@ Please give me feedback if the code was readable or if theres still anything i n
 
 I have a repeating-linear-grid as background, had some problems with it not working on some browsers.
 Im not quite certain that it is the right design choice, but if it does not load for you thats ok.
-Just wanted you to know that it is supposed to be there. 
+Just wanted you to know that it is supposed to be there.
 
 ## Installation
 Bash
