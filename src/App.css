@@ -37,23 +37,66 @@ padding: 30px;
 
 
 /* -------------------- Layout Homepage ------------------*/
+
 .Home {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 900px) and (max-width: 1300px){
-  .Home {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media screen and (max-width: 900px){
+@media screen and (max-width: 800px){
   .Home{
     grid-template-columns: 1fr;
   }
+
+  .search{
+      width: 70%;
+  }
 }
+
+
+@media screen and (min-width: 800px) and (max-width: 1300px){
+  .Home {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .search{
+      width: 50%;
+  }
+}
+
+
+@media screen and (min-width: 1300px){
+  .Home{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .search{
+      width: 50%;
+  }
+}
+
+
+
+/*  -------------Search Function ----------*/
+
+.SearchGames{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.search{
+
+  margin: auto;
+  font-size: 20px;
+  margin-top: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+}
+
+
+
 
 /* --------------Styling Game Cards Homepage--------*/
 .game{
@@ -63,7 +106,6 @@ padding: 30px;
   grid-template-columns:  1fr 1fr 1fr;
   grid-template-rows: auto 1fr 40px;
   border-radius: 10px;
-
 }
 
 
@@ -92,7 +134,7 @@ padding: 30px;
   max-height: 220px;
 }
 
-.game--imgcontainer .game--rating{
+ .game--rating{
   width: 50%;
   grid-column: 1/2;
   grid-row: 2/3;
@@ -143,24 +185,11 @@ padding: 30px;
   background-color: lightblue;
   cursor: pointer;
   border: none;
-
   transform:scaleX(1.01);
-
 }
 
 
-/*  -------------Search Function ----------*/
 
-.SearchGames{
-  display: grid;
-}
-
-.SearchGames input {
-  width: 50%;
-  margin: auto;
-  font-size: 20px;
-  margin-top: 30px;
-}
 
 
 
@@ -168,10 +197,25 @@ padding: 30px;
 /* ------------------- Contact Form -----------------*/
 .login {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-
 }
 
+@media only screen and (max-width: 900px){
+ .login{
+   grid-template-columns: 10px 1fr 10px;
+ }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1300px){
+ .login{
+   grid-template-columns: 100px 1fr 100px;
+ }
+}
+
+@media only screen and (min-width: 1300px){
+ .login{
+   grid-template-columns: 300px 1fr 300px;
+ }
+}
 
 .form--item{
   grid-column: 2/3;
@@ -180,36 +224,71 @@ padding: 30px;
   font-size: 20px;
 }
 
-.form-item p{
-  font-size: 10px;
-}
 
  .form--item input{
-  width: 99%;
+  width: 95.5%;
+  font-size: 20px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
 }
+
+.form--message {
+ width: 99%;
+ border-radius: 10px;
+}
+
+.form--message  textarea{
+  font-size: 20px;
+}
+
+.form--submit  {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.form--submit:hover{
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+.errorMessage{
+  color: red;
+  font-size: 15px;
+  margin-bottom: -5px;
+  margin-top: 2px;
+}
+
 
 
 
 /*---------------------- CharacterDetail ----------------------- */
-  .CharacterDetail {
-    display: grid;
-    grid-template-columns: 300px 1fr 300px;
-    margin-bottom: 100px;
+
+.CharacterDetail {
+  display: grid;
+  margin-bottom: 100px;
+}
+
+  @media screen and (max-width: 900px) {
+    .CharacterDetail {
+      grid-template-columns: 20px 1fr 20px;
+    }
   }
 
   @media screen and (min-width: 900px) and (max-width: 1300px){
     .CharacterDetail {
-
       grid-template-columns: 100px 1fr 100px;
     }
   }
 
-  @media screen and (max-width: 900px) {
+  @media screen and (min-width: 1300px){
     .CharacterDetail {
-
-      grid-template-columns: 20px 1fr 20px;
+      grid-template-columns: 300px 1fr 300px;
     }
   }
+
 
   .detail--title, .detail--image, .detail--description,.detail--link{
     grid-column: 2/3;
@@ -221,6 +300,11 @@ padding: 30px;
 
   .detail--description, .detail--title {
     color: white;
+  }
+
+  .detail--description{
+    background-color: black;
+    padding: 20px;
   }
 
   .detail--link{
@@ -245,6 +329,8 @@ padding: 30px;
     transform: scaleY(1.03);
   }
 
+
+
   /* -------------footer -------------- */
 
   footer{
@@ -260,6 +346,6 @@ padding: 30px;
 
   footer p{
     margin :auto;
-      color: white;
-      padding: 20px;
+    color: white;
+    padding: 20px;
   }
